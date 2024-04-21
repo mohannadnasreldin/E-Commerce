@@ -1,0 +1,54 @@
+.Sidebar{
+    width: 280px;
+    min-height: 100vh;
+    margin-right: 10px;
+    background: var(--secondcolor);
+    box-shadow: 0 0 10px 0 #555;
+    position: sticky;
+    top: 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+.title{
+    color: var(--maincolor);
+    font-size: 2rem;
+}
+h3{
+    color: var(--maincolor);
+}
+.sidebar-wrapper{
+    padding: 20px;
+    color: var(--whitecolor);
+}
+ul{
+    list-style: none;
+}
+.sidebarlink{
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px 5px;
+    border-radius: 50px;
+}
+.Sidebar li:hover{
+    background: var(--hovercolor);
+    border-radius: 10px;
+}
+.Sidebar .editbtn{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 1rem;
+    margin: 15px 0px;
+}
+.active{
+    background: var(--hovercolor);
+    border-radius: 10px;
+}
+.logout{
+    margin-top:50px !important;
+    height: 50px;
+    width: 250px !important;
+}
