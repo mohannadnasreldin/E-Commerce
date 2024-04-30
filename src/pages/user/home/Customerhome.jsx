@@ -2,12 +2,9 @@ import React, { useEffect, useState } from 'react'
 import './home.css'
 import '../../../components/header/header.css'
 import Product from '../../../components/product/Product'
-import Category from '../../../components/product/Category'
 import { Link } from 'react-router-dom'
 import axios from 'axios';
-import { FaShippingFast , FaNapster ,FaHotjar ,FaLinux ,FaMailchimp} from 'react-icons/fa'
 
-import { AiFillDollarCircle } from 'react-icons/ai'
 function Customerhome() {
 
   const [products, setProducts] = useState([])
@@ -51,22 +48,7 @@ function Customerhome() {
           <img src={require("../../../assits/main-banner-1.jpg")} alt="" />
         </div>
       </main>
-      <section className="categories">
-        {
-          categories.map((category) => {
 
-            return (
-              <Category
-                id={category.category_id}
-                category_name={category.category_name}
-                description={category.description}
-                image={products.filter((product) => product.category_id === category.category_id).map((product) => product.image)[0]}
-
-              />
-            )
-          })
-        }
-      </section>
       <section className="products">
         <h1 className="headingg">
           <span>L</span>
@@ -77,11 +59,13 @@ function Customerhome() {
           <span>T</span>
           <span class="space"></span>
           <span>P</span>
+          <span>R</span>
           <span>O</span>
           <span>D</span>
           <span>U</span>
           <span>C</span>
           <span>T</span>
+          <span>S</span>
         </h1>
         <div className="order-cont">
 
@@ -135,89 +119,6 @@ function Customerhome() {
             })
           }
         </div>
-      </section>
-      <section className="products">
-        <h1 className="headingg">
-          <span>S</span>
-          <span>E</span>
-          <span>R</span>
-          <span>V</span>
-          <span>E</span>
-          <span>S</span>
-        </h1>
-        <div className='ma'>
-          <div class="cards">
-            <div class="contentt">
-              <div class="icon"><FaShippingFast className='i' /></div>
-              <div class="title">Web Development</div>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, reprehenderit.</p>
-            </div>
-          </div>
-          <div class="cards">
-            <div class="contentt">
-              <div class="icon"><AiFillDollarCircle className='i' /></div>
-              <div class="title">Web Development</div>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, reprehenderit.</p>
-            </div>
-          </div>
-          <div class="cards">
-            <div class="contentt">
-              <div class="icon"><FaHotjar className='i' /></div>
-              <div class="title">Web Development</div>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, reprehenderit.</p>
-            </div>
-          </div>
-          <div class="cards">
-            <div class="contentt">
-              <div class="icon"><FaLinux className='i' /></div>
-              <div class="title">Web Development</div>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, reprehenderit.</p>
-            </div>
-          </div>
-          <div class="cards">
-            <div class="contentt">
-              <div class="icon"><FaMailchimp className='i' /></div>
-              <div class="title">Web Development</div>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, reprehenderit.</p>
-            </div>
-          </div>
-          <div class="cards">
-            <div class="contentt">
-              <div class="icon"><FaNapster className='i' /></div>
-              <div class="title">Web Development</div>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, reprehenderit.</p>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      {/* <section className="services">
-        <h2>OUR SERVICES</h2>
-        <div className="services-cont">
-          <article>
-            <FaShippingFast className='icon' />
-            <h3>fast shipping</h3>
-            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
-          </article>
-
-          <article>
-            <FaMoneyBillWave className='icon' />
-            <h3>cheap products</h3>
-            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
-          </article>
-
-          <article>
-            <MdOutlineEqualizer className='icon' />
-            <h3>high quality</h3>
-            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
-          </article>
-        </div>
-      </section> */}
-      <section className="about-us small">
-        <h2>ABOUT_US</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id excepturi optio eos aut architecto temporibus suscipit nam enim atque dolores cumque, quasi dolorum, animi eum perspiciatis, totam mollitia dolore expedita beatae possimus. Impedit totam eligendi quibusdam repudiandae tenetur dolor. Odit?</p>
-        <Link to='/about'><button className='learn'>learn more</button></Link>
       </section>
 
     </div>

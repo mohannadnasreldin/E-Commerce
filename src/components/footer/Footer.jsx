@@ -9,13 +9,7 @@ const Footer = () => {
   return (
     <footer>
       <div className="left section">
-        <h1>Team Member</h1>
-        <p>Nader Mamdouh</p>
-        <p>Mohamed Anwer</p>
-        <p>micheal Anwer</p>
-        <p>Omnia abdelatef</p>
-        <p>Mina Wade3</p>
-        <p>Hosam Gamel</p>
+       
       </div>
       <div className="main section">
 
@@ -27,13 +21,11 @@ const Footer = () => {
 
         <p>ENJOY SHOPPING</p>
         
-        <a href="mailto:nadermamdouh68@gmail.com" className='butn'>E-MAIL US</a>
+        <a href="mailto:Blackshopping@email.com" className='butn'>E-MAIL US</a>
         <p>&copy; 2023 </p>
       </div>
       <div className="right section">
-        <a href="">SIPPING INFO</a>
-        <a href="">RETURN / EXCHANGE</a>
-        <a href="">CONTACT</a>
+       
       </div>
     </footer>
   )

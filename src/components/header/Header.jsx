@@ -38,12 +38,10 @@ const Header = () => {
         authorization: localStorage.getItem('token'),
       }
     })
-    const conf = confirm('Are you sure you want to log out?', 'Log out')
-    if (conf === true) {
       localStorage.removeItem('token')
       localStorage.removeItem('type')
       window.location.reload()
-    }
+    
   }
   useEffect(() => {
     axios.get('http://localhost:5000/category')
@@ -72,14 +70,7 @@ const Header = () => {
     <>
       <div>
         <div className={sticky ? " headerApp sticky " : 'headerApp'}>
-          {/* <nav>
-        <ul className='nav-icons'>
-          <li><Link className='link-header' to="/">Home</Link></li>
-          <li><Link className='link-header' to='/about'>About</Link></li>
-          <li><Link className='link-header' to="/products">Our Products</Link></li>
-          <li><Link className='link-header' to="/products">Our Categories</Link></li>
-        </ul>
-      </nav> */}
+          
           <nav>
             {
               localStorage.getItem('token') ?
@@ -107,7 +98,7 @@ const Header = () => {
               </div>
             ) : (
               <Link to="/login"><div className="reer">
-                <div className='login-btn'>LOG-IN</div>
+                <div className='login-btn'>LOGIN</div>
               </div></Link>
             )
           }
